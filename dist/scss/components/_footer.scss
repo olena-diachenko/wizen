@@ -1,0 +1,211 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.footer {
+    & > .container {
+        background-color: $dark-bgcolor;
+        color: $light-text-color;
+    }
+
+    &__wrap {
+        padding: 120px 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__logo-wrap {
+        margin-right: 54px;
+    }
+
+    &__desk-logo-img {
+        width: 208px;
+        height: 150px;
+    }
+
+    &__tablet-logo-link {
+        display: none;
+    }
+
+    &__menu-wrap,
+    &__contacts {
+        margin-right: 132px;
+    }
+
+    &__nav {
+        border-left: 1px solid $main-bgcolor;
+        padding-left: 30px;
+    }
+
+    &__nav-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 72px;
+        grid-row-gap: 40px;
+    }
+
+    &__nav-item,
+    &__contacts-title {
+        text-transform: uppercase;
+        width: max-content;
+        font-weight: 700;
+    }
+
+    &__nav-item {
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $accent-text-color;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
+
+    &__contacts-wrap,
+    &__information {
+        font-weight: 350;
+        color: $gray-text-color;
+    }
+
+    &__phone {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__social-links {
+        align-self: baseline;
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__facebook-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__instagram-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    &__telegram-icon {
+        width: 29px;
+        height: 29px;
+    }
+
+    &__facebook-icon,
+    &__instagram-icon,
+    &__telegram-icon {
+        color: $light-gray-bgcolor;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            color: $main-bgcolor;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        &__wrap {
+            padding: 80px 0;
+            justify-content: space-between;
+        }
+
+        &__logo-wrap {
+            margin-right: 28px;
+        }
+
+        &__desk-logo-img {
+            width: 174px;
+            height: 127px;
+        }
+
+        &__menu-wrap,
+        &__contacts {
+            margin-right: 50px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {
+        &__wrap {
+            padding: 80px 0 54px;
+            flex-direction: column;
+        }
+
+        &__logo-wrap {
+            margin-right: 0;
+            width: 190px;
+            height: 60px;
+            margin-bottom: 54px;
+        }
+
+        &__desk-logo-link {
+            display: none;
+        }
+
+        &__tablet-logo-link {
+            display: block;
+            height: 100%;
+        }
+
+        &__tablet-logo-img {
+            width: 190px;
+            height: 60px;
+        }
+
+        &__menu-wrap {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+
+        &__nav {
+            border-left: none;
+            border-top: 1px solid #fdfffc;
+            padding-left: 0;
+        }
+
+        &__nav-list {
+            width: min-content;
+            padding-top: 30px;
+        }
+
+        &__contacts {
+            margin-right: 0;
+            margin-bottom: 16px;
+            align-items: center;
+            gap: 24px;
+        }
+
+        &__contacts-wrap {
+            text-align: center;
+        }
+
+        &__bottom {
+            gap: 40px;
+        }
+
+        &__information {
+            align-items: center;
+        }
+    }
+}

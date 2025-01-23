@@ -1,0 +1,46 @@
+@import "breakpoints";
+@import "colors";
+@import "fonts";
+
+@font-face {
+    font-family: "Leelawadee UI";
+    src: url("../assets/fonts/Leelawadee-UI/LeelawUI.ttf") format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 21px;
+    background-color: $main-bgcolor;
+    color: $main-text-color;
+    overflow-x: hidden;
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 104px;
+}
+
+@media screen and (max-width: $breakpoint_laptop) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: $breakpoint_mobile) {
+    .container {
+        min-width: 360px;
+        padding: 0 24px;
+    }
+}

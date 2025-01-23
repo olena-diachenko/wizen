@@ -1,0 +1,370 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.orderService-modal {
+    &__content {
+        position: relative;
+        padding: 64px 72px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        min-width: 551px;
+        max-width: 551px;
+    }
+
+    &__close-icon {
+        position: absolute;
+        top: 34px;
+        right: 34px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &__header {
+        display: block;
+        padding: 0;
+        text-align: center;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__title {
+        font-family: $accent-font;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    &__subtitle {
+        color: $second-text-color;
+        width: 70%;
+    }
+
+    &__subtitle_accent {
+        color: $accent-text-color;
+    }
+
+    &__body {
+        padding: 0;
+    }
+
+    &__input-wrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &.error {
+            & > label {
+                color: $error-text-color;
+            }
+
+            & > input {
+                color: $error-text-color;
+                border: 2px solid;
+                border-color: $error-text-color;
+            }
+
+            & > .iti > input {
+                color: $error-text-color;
+                border: 2px solid;
+                border-color: $error-text-color;
+
+                &::placeholder {
+                    color: $error-text-color;
+                }
+            }
+
+            & > .orderService-modal__input {
+                border: 2px solid;
+                border-color: $error-text-color;
+            }
+
+            & > .details {
+                &::after {
+                    display: none;
+                }
+            }
+
+            & > .details > summary {
+                color: $error-text-color;
+            }
+
+            & > .orderService-modal__error-msg {
+                color: $error-text-color;
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 3px;
+            }
+
+            & > .orderService-modal__error-icon {
+                display: block;
+            }
+        }
+
+        & > .iti--allow-dropdown {
+            width: 100% !important;
+
+            &>.iti__country-container {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: 113px;
+                    width: 1px;
+                    height: 96%;
+                    background-color: $input-border-color;
+                    z-index: 1;
+                }
+            }
+
+            &>.iti__country-container>button {
+                width: 113px;
+                height: 94%;
+                background-color: $main-bgcolor;
+                border-radius: 4px 0 0 4px;
+                top: 2px;
+                left: 2px;
+
+                &:hover {
+                    background-color: $main-bgcolor;
+                }
+
+                & .iti__arrow {
+                    margin-left: 10px;
+                    border-left: none;
+                    border-right: none;
+                    border-top: none;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 24px;
+                        transform: translateY(-50%);
+                        width: 12px;
+                        height: 7px;
+                        background: url("../assets/svg/chevron-down.svg") 100% 100%;
+                        pointer-events: none;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__input {
+        height: 50px;
+        border-radius: 4px;
+        padding: 10px 15px;
+        border-color: $input-border-color;
+
+        &.iti__tel-input {
+            padding-left: 128px !important;
+        }
+
+        &.details {
+            width: 100%;
+            margin-right: 0;
+            padding: 0;
+
+            & > summary {
+                padding: 13px 15px 14px;
+                color: $input-border-color;
+            }
+
+            &::after {
+                background: url("../assets/svg/chevron-down.svg") 100% 100%;
+            }
+
+            &.open {
+                border: 2px solid;
+                border-color: $dark-bgcolor;
+            }
+        }
+    }
+
+    &__multiselect {
+        &_active {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+
+    &__multiselect-dropdown {
+        left: -1px;
+        top: 50px;
+        min-width: 100.5%;
+        box-shadow: 2px 2px 10px 0px $shadow-color;
+    }
+
+    &__services-option-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 16px;
+        gap: 16px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    &__ellipse-icon {
+        min-width: 11px;
+    }
+
+    &__option-close-icon {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    &__services-option {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__textarea {
+        resize: none;
+        border-radius: 4px;
+        padding: 10px 15px;
+        border-color: $input-border-color;
+        position: relative;
+        width: 100%;
+        height: 170px;
+        scrollbar-color: $accent-bgcolor $accent-bgcolor;
+        scrollbar-width: thin;
+
+        &::placeholder {
+            color: $input-border-color;
+        }
+    }
+
+    &__textarea-counter {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        font-weight: 300;
+        color: $input-border-color;
+    }
+
+    &__form-label {
+        font-size: 14px;
+        line-height: 15px;
+        margin-bottom: 5px;
+    }
+
+    &__error-icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        margin-top: -10px;
+        display: none;
+    }
+
+    &__footer {
+        border-top: none;
+        padding: 0;
+        display: block;
+        margin-top: 64px;
+
+        &>button {
+            margin: 0;
+            width: 100%;
+            height: 69px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: $light-text-color;
+            background-color: $accent-bgcolor;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $btn-hover-bgcolor;
+                color: $light-text-color;
+            }
+
+            &:active {
+                background-color: $clicked-btn-bgcolor !important;
+                color: $light-text-color !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        &__content {
+            padding: 48px;
+            gap: 40px;
+            min-width: 480px;
+            max-width: 480px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &__footer {
+            margin-top: 40px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {}
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        &__content {
+            padding: 40px 24px 24px;
+            gap: 24px;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        &__close-icon {
+            top: 18px;
+            right: 18px;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__footer {
+            margin-top: 24px;
+        }
+    }
+}
+
+.form-control:focus {
+    color: $main-text-color;
+    background-color: $main-bgcolor;
+    border: 2px solid;
+    border-color: $dark-bgcolor;
+    outline: 0;
+    box-shadow: none;
+}

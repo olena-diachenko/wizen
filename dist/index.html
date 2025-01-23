@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Аренда недвижимости в Польше" />
+    <title>Wizen</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/vendor/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.4/build/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/index.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="header__top">
+            <div class="header__burger-wrap">
+              <button
+                class="header__burger-menu"
+                id="header__burger-menu"
+                type="button"
+              >
+                <svg width="33" height="22">
+                  <use xlink:href="assets/sprite.svg#menu"></use>
+                </svg>
+              </button>
+              <button class="header__burger-close" id="header__burger-close">
+                <svg width="23" height="22">
+                  <use xlink:href="assets/sprite.svg#close-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="header__logo-wrap">
+              <div class="header__logo-link">
+                <svg class="header__logo-img">
+                  <use xlink:href="assets/sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <div class="header__logo-mobile-link">
+                <svg class="header__logo-mobile-img">
+                  <use xlink:href="assets/sprite.svg#logo-mobile"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="header__buttons-wrap_top">
+              <ul class="header__buttons-list_top">
+                <li class="header__phone-btn_top">
+                  <button class="header__phone-link_top" type="button">
+                    <svg width="18" height="18">
+                      <use xlink:href="assets/sprite.svg#phone"></use>
+                    </svg>
+                  </button>
+                  <div class="header__phone-popover">
+                    <div class="header__phone-popover-content">
+                      <div class="header__phone-popover-place">
+                        <a
+                          href="https://maps.app.goo.gl/YeZmEMH1PbWf22ja9"
+                          target="_blank"
+                        >
+                          <svg width="20" height="20">
+                            <use xlink:href="assets/sprite.svg#location"></use>
+                          </svg>
+                          <p class="lng-header__first-city">Варшава</p>
+                        </a>
+                      </div>
+                      <div class="header__phone-popover-tel">
+                        <a href="tel:+48025214256">
+                          <svg width="18" height="18">
+                            <use xlink:href="assets/sprite.svg#phone"></use>
+                          </svg>
+                          <p>+48 025 214 256</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="header__phone-popover-divider"></div>
+                    <div class="header__phone-popover-content">
+                      <div class="header__phone-popover-place">
+                        <a
+                          href="https://maps.app.goo.gl/au2jxuQFM3zTfTi47"
+                          target="_blank"
+                        >
+                          <svg width="20" height="20">
+                            <use xlink:href="assets/sprite.svg#location"></use>
+                          </svg>
+                          <p class="lng-header__second-city">Вроцлав</p>
+                        </a>
+                      </div>
+                      <div class="header__phone-popover-tel">
+                        <a href="tel:+48123258256">
+                          <svg width="18" height="18">
+                            <use xlink:href="assets/sprite.svg#phone"></use>
+                          </svg>
+                          <p>+48 123 258 256</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="header__language-wrap_top">
+                  <div class="header__language_top">
+                    <button class="header__language-btn_top">Ru</button>
+                    <ul class="header__language-list_top">
+                      <li class="header__language-item_top" data-value="Ru">
+                        Ru
+                      </li>
+                      <li class="header__language-item_top" data-value="Pl">
+                        Pl
+                      </li>
+                      <li class="header__language-item_top" data-value="Ua">
+                        Ua
+                      </li>
+                    </ul>
+                    <input
+                      class="header__language-input_hidden_top"
+                      type="text"
+                      name="language"
+                      id="language-top"
+                      value=""
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav" id="header__nav">
+              <ul class="header__menu">
+                <li class="header__nav-item">
+                  <a href="#why-us" class="header__nav-link lng-header-why-us"
+                    >Почему мы?</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a
+                    href="#services"
+                    class="header__nav-link lng-header-services"
+                    >Услуги</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#stages" class="header__nav-link lng-header-stages"
+                    >Этапы</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#price" class="header__nav-link lng-header-price"
+                    >Цены</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a
+                    href="#feedbacks"
+                    class="header__nav-link lng-header-feedbacks"
+                    >Отзывы</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link lng-header-collaboration"
+                    >Сотрудничества / партнёрства</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#faq" class="header__nav-link">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__bottom-buttons">
+              <div class="header__buttons-wrap">
+                <ul class="header__buttons-list">
+                  <li class="header__phone-btn">
+                    <button class="header__phone-link" type="button">
+                      <svg width="18" height="18">
+                        <use xlink:href="assets/sprite.svg#phone"></use>
+                      </svg>
+                    </button>
+                    <div class="header__phone-popover-bottom">
+                      <div class="header__phone-popover-content">
+                        <div class="header__phone-popover-place">
+                          <a
+                            href="https://maps.app.goo.gl/YeZmEMH1PbWf22ja9"
+                            target="_blank"
+                          >
+                            <svg width="20" height="20">
+                              <use
+                                xlink:href="assets/sprite.svg#location"
+                              ></use>
+                            </svg>
+                            <p class="lng-header__first-city-bottom">Варшава</p>
+                          </a>
+                        </div>
+                        <div class="header__phone-popover-tel">
+                          <a href="tel:+48025214256">
+                            <svg width="18" height="18">
+                              <use xlink:href="assets/sprite.svg#phone"></use>
+                            </svg>
+                            <p>+48 025 214 256</p>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="header__phone-popover-divider"></div>
+                      <div class="header__phone-popover-content">
+                        <div class="header__phone-popover-place">
+                          <a
+                            href="https://maps.app.goo.gl/au2jxuQFM3zTfTi47"
+                            target="_blank"
+                          >
+                            <svg width="20" height="20">
+                              <use
+                                xlink:href="assets/sprite.svg#location"
+                              ></use>
+                            </svg>
+                            <p class="lng-header__second-city-bottom">
+                              Вроцлав
+                            </p>
+                          </a>
+                        </div>
+                        <div class="header__phone-popover-tel">
+                          <a href="tel:+48123258256">
+                            <svg width="18" height="18">
+                              <use xlink:href="assets/sprite.svg#phone"></use>
+                            </svg>
+                            <p>+48 123 258 256</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__language">
+                <button class="header__language-btn">Ru</button>
+                <ul class="header__language-list">
+                  <li class="header__language-item" data-value="Ru">Ru</li>
+                  <li class="header__language-item" data-value="Pl">Pl</li>
+                  <li class="header__language-item" data-value="Ua">Ua</li>
+                </ul>
+                <input
+                  class="header__language-input_hidden"
+                  type="text"
+                  name="language"
+                  id="language"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <h1 class="hero__title lng-hero-title">
+          Берем на себя все трудности поиска жилья и легализации в Польше
+        </h1>
+        <div class="hero__img-wrap"></div>
+      </div>
+      <div class="more-than">
+        <div class="container">
+          <div class="more-than__bg">
+            <p class="lng-more-than__text">Более</p>
+            <div class="more-than__text-container">
+              <div class="more-than__text-wrap first">
+                <p class="more-than__text first" data-value="160">160</p>
+                <p
+                  class="more-than__text-accent first lng-more-than__text-first"
+                >
+                  клиентов нашли
+                  <span class="more-than__subtext-accent">дом</span>
+                  с нашей помощью
+                </p>
+              </div>
+              <div class="more-than__text-wrap second">
+                <div class="more-than__text second" data-value="30">30</div>
+                <p class="more-than__text-accent lng-more-than__text-second">
+                  клиентов получили карты побыта
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-us">
+        <div class="container">
+          <div class="about-us__wrap">
+            <div class="about-us__text-wrap">
+              <div>
+                <p class="about-us__text-title lng-about-us-title-1">
+                  Жизнь с чистого листа
+                </p>
+                <p class="about-us__text lng-about-us-text-1">
+                  Мы Виктория и Евгений. В определенный момент нашей жизни мы
+                  решили релацироваться в Польшу и начать жизнь с чистого листа.
+                  Не имея достаточного опыта и знаний, с огромным языковым
+                  барьером в новой стране. Как и многие приезжие, мы были в
+                  неведении, как оформить договор аренды, какие документы для
+                  этого необходимы, какие вообще виды договоров могут быть, на
+                  что обращать внимание. И подобных вопросов возникала масса.
+                </p>
+              </div>
+              <div>
+                <p class="about-us__text-title lng-about-us-title-2">
+                  Испытания
+                </p>
+                <p class="about-us__text lng-about-us-text-2">
+                  Мы прошли все испытания и получили колоссальный опыт и знания,
+                  которыми готовы делиться с вами. Сейчас мы, вместе с нашей
+                  замечательной командой, можем организовать комфортный переезд
+                  во многие крупные города Польши. К нашей команде обращается
+                  огромное количество клиентов из стран ближнего и дальнего
+                  зарубежья. И мы рады, что можем помочь всем нашим клиентам!
+                </p>
+              </div>
+              <button
+                class="about-us__btn lng-about-us-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#freeAdvice"
+              >
+                Бесплатная консультация
+              </button>
+            </div>
+            <div class="about-us__photos-wrap">
+              <div class="about-us__photo">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="assets/images/about-us/Victoria.webp"
+                  />
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="assets/images/about-us/Victoria-laptop.webp"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="assets/images/about-us/Victoria-small.webp"
+                  />
+                  <img
+                    class="about-us__img"
+                    src="assets/images/about-us/Victoria.webp"
+                    alt="Victoria's photo"
+                  />
+                </picture>
+              </div>
+              <div class="about-us__photo">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="assets/images/about-us/Yevhen.webp"
+                  />
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="assets/images/about-us/Yevhen-laptop.webp"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="assets/images/about-us/Yevhen-small.webp"
+                  />
+                  <img
+                    class="about-us__img"
+                    src="assets/images/about-us/Yevhen.webp"
+                    alt="Yevhen's photo"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services" id="services">
+        <div class="container">
+          <h3 class="services__title lng-services">Услуги</h3>
+          <ul class="services__list">
+            <li class="services__item">
+              <p class="services__item-number">01</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-1">
+                  Поиск жилья удалённо и на месте
+                </p>
+                <p class="services__item-subtext lng-services-subtext-1">
+                  Полное сопровожение от подбора варианта до получения ключей
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">02</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-2">
+                  Оформление всех видов карт побыта
+                </p>
+                <p class="services__item-subtext lng-services-subtext-2">
+                  Полное сопровождение до момента получения
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">03</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-3">
+                  Оформление окказионального найма
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">04</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-4">
+                  Открытие расчётного счёта
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">05</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-5">
+                  Оформление песеля
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">06</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-6">
+                  Оформление мельдунка
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <p class="services__item-number">07</p>
+              <div class="services__item-content">
+                <p class="services__item-text lng-services-text-7">
+                  Устройство детей в школу
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="why-us" id="why-us">
+        <div class="container">
+          <h3 class="why-us__title lng-why-us">Почему мы?</h3>
+          <div class="why-us__cards">
+            <div class="why-us__card">
+              <h4 class="why-us__card-title lng-why-us-title-1">Результат</h4>
+              <p class="why-us__card-text lng-why-us-text-1">
+                Мы нацелены на результат нашей работы и готовы приложить все
+                свои усилия, знания, опыт и предоставить вам жильё,
+                соответствующее вашему запросу и без предоплаты
+              </p>
+            </div>
+            <div class="why-us__card">
+              <h4 class="why-us__card-title lng-why-us-title-2">
+                Полное сопровождение
+              </h4>
+              <p class="why-us__card-text lng-why-us-text-2">
+                Оказываем полное сопровождение на всех этапах аренды: поиск,
+                осмотр жилья, присутствие в качестве переводчика, сбор и подпись
+                документов, общение с арендодателем
+              </p>
+            </div>
+            <div class="why-us__card">
+              <h4 class="why-us__card-title lng-why-us-title-3">
+                Задачи любой сложности
+              </h4>
+              <p class="why-us__card-text lng-why-us-text-3">
+                Мы беремся за задачи любой сложности. Ситуация на рынке аренды
+                выставляет множество условий, но мы знаем, где искать, и умеем
+                договариваться в максимально сжатые сроки
+              </p>
+            </div>
+            <div class="why-us__card">
+              <h4 class="why-us__card-title lng-why-us-title-4">Цена</h4>
+              <p class="why-us__card-text lng-why-us-text-4">
+                Мы - развивающийся проект, который предлагает комфортную
+                стоимость
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="action-service">
+        <div class="action-service__wrap">
+          <div class="action-service__content">
+            <h3 class="action-service__title lng-action-service-title">
+              Расскажите, какие услуги вас интересуют
+            </h3>
+            <form action="" class="action-service__form">
+              <details class="action-service__multiselect">
+                <summary class="lng-action-service-multiselect">Услуги</summary>
+                <div class="action-service__multiselect-dropdown">
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Покупка недвижимости"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-1"
+                      >Покупка недвижимости</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Продажа недвижимости"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-2"
+                      >Продажа недвижимости</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Удаленный поиск жилья в аренду"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-3"
+                      >Удаленный поиск жилья в аренду</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Поиск жилья в аренду на месте"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-4"
+                      >Поиск жилья в аренду на месте</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Карта побыта по бизнесу / полное сопровождение"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-5"
+                      >Карта побыта по бизнесу / полное сопровождение</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Карта побыта по работе, учебе, гуманитарная, по воссоединению семьи (karta czasowego pobytu) / полное сопровождение"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-6"
+                      >Карта побыта по работе, учебе, гуманитарная, по
+                      воссоединению семьи (karta czasowego pobytu) / полное
+                      сопровождение</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Карта постоянного вида на жительство (karta stałego pobytu) / полное сопровождение"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-7"
+                      >Карта постоянного вида на жительство (karta stałego
+                      pobytu) / полное сопровождение</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Карта поляка / полное сопровождение"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-8"
+                      >Карта поляка / полное сопровождение</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Консультация по легализации"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-9"
+                      >Консультация по легализации</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Заполние заявления для ужонда (карта побыта, карта поляка)"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-10"
+                      >Заполние заявления для ужонда (карта побыта, карта
+                      поляка)</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Открытие банковского счета"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-11"
+                      >Открытие банковского счета</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Оформление песеля"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-12"
+                      >Оформление песеля</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Оформление мельдунка (прописки)"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-13"
+                      >Оформление мельдунка (прописки)</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Найм окказиональный (резервный адрес)"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-14"
+                      >Найм окказиональный (резервный адрес)</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      hidden
+                      name="select"
+                      value="Оформление детей в сад/школу"
+                    />
+                    <span
+                      class="action-service__multiselect-content lng-action-service-content-15"
+                      >Оформление детей в сад/школу</span
+                    >
+                    <svg class="action-service__icon" width="15" height="11">
+                      <use xlink:href="assets/sprite.svg#check-icon"></use>
+                    </svg>
+                  </label>
+                </div>
+              </details>
+              <button
+                class="action-service__btn lng-action-service-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#orderService"
+              >
+                Заказать услугу
+              </button>
+            </form>
+          </div>
+          <div class="action-service__img-wrap"></div>
+        </div>
+      </div>
+      <div class="details">
+        <ul class="details__accordion-list">
+          <li class="details__accordion-item">
+            <button class="details__accordion-control">
+              <p class="details__accordion-title lng-details-accordion-title-1">
+                Трудности при поиске жилья в Польше
+              </p>
+              <svg class="details__accordion-icon">
+                <use xlink:href="assets/sprite.svg#circle-btn-right"></use>
+              </svg>
+            </button>
+            <div class="details__accordion-content">
+              <ul class="details__accordion-cards house-hunting">
+                <li class="details__accordion-card house-hunting">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#language"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-1">
+                    Незнание языка и трудности коммуникации с арендодателем
+                  </p>
+                </li>
+                <li class="details__accordion-card house-hunting">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#laws"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-2">
+                    Незнание польского законодательства и, как следствие,
+                    неуверенность в юридической чистоте сделок и касающиеся
+                    расчёта коммунальных услуг
+                  </p>
+                </li>
+                <li class="details__accordion-card house-hunting">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#exit"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-3">
+                    Множество отказов от арендодателей семьям с детьми и (или)
+                    доманими животными, в удалённом заселении, кастинги,
+                    проводимые арендодателем
+                  </p>
+                </li>
+                <li class="details__accordion-card house-hunting">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#home"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-4">
+                    Cложность получение согласия от арендодателя на заселение
+                    при работе на иностранную компанию и для фрилансеров
+                  </p>
+                </li>
+              </ul>
+              <p
+                class="details__accordion-title lng-details-accordion-title-1-1"
+              >
+                Как мы можем вам помочь
+              </p>
+              <ul class="details__accordion-cards help">
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#deals"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-5">
+                    Помощь в поиске жилья, удовлетворяещего всем вашим критериям
+                    и полное сопровождение - от подбора до заселения (семей с
+                    детьми, домашними животными)
+                  </p>
+                </li>
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#laws"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-6">
+                    Проверка юридической чистоты договора аренды и заключение
+                    его на выгодных для вас условиях, консультация в решении
+                    проблемы подтвеждения доходов для арендодателя
+                  </p>
+                </li>
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#distance"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-7">
+                    Организация удалённого поиска,тем самым решение проблемы
+                    двойного переезда и отсутствие необходимости во временном
+                    жилье
+                  </p>
+                </li>
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#speed"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-8">
+                    Решение проблемы повышенных тарифов на электроэнергию
+                  </p>
+                </li>
+              </ul>
+              <div class="details__accordion-btn-wrap">
+                <button
+                  class="details__accordion-btn lng-details-accordion-btn-1"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderService"
+                >
+                  Помочь с поиском
+                </button>
+              </div>
+              <div class="details__accordion-space"></div>
+            </div>
+          </li>
+          <li class="details__accordion-item">
+            <button class="details__accordion-control">
+              <p class="details__accordion-title lng-details-accordion-title-2">
+                Трудности, с которыми сталкиваются иностранцы при легализации
+              </p>
+              <svg class="details__accordion-icon">
+                <use xlink:href="assets/sprite.svg#circle-btn-right"></use>
+              </svg>
+            </button>
+            <div class="details__accordion-content">
+              <ul class="details__accordion-cards legalize">
+                <li class="details__accordion-card legalize">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#docs"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-9">
+                    Множество требований к документам, с которыми сложно
+                    разобраться без знания языка
+                  </p>
+                </li>
+                <li class="details__accordion-card legalize">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#laws"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-10">
+                    Юридические тонкости польского законодательста. Отличающиеся
+                    требования в разных ужондах
+                  </p>
+                </li>
+              </ul>
+              <p
+                class="details__accordion-title lng-details-accordion-title-2-1"
+              >
+                Как мы можем вам помочь
+              </p>
+              <ul class="details__accordion-cards help legalize">
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#deals"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-11">
+                    Полное сопровождение до момента получения карты побыта
+                  </p>
+                </li>
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#laws"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-12">
+                    Юридическая консультация в выборе основания легализации
+                  </p>
+                </li>
+                <li class="details__accordion-card help">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#docs"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-13">
+                    Сбор необходимых документов и заполнение заявлений
+                  </p>
+                </li>
+              </ul>
+              <p
+                class="details__accordion-title lng-details-accordion-title-2-2"
+              >
+                При полном сопровождении мы
+              </p>
+              <ul class="details__accordion-cards support">
+                <li class="details__accordion-card support">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#docs"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-14">
+                    Собираем и подаем необходимые документы в ужонд
+                  </p>
+                </li>
+                <li class="details__accordion-card support">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#eyes"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-15">
+                    Контролируем рассмотрение вашего дела в ужонде
+                  </p>
+                </li>
+                <li class="details__accordion-card support">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#people"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-16">
+                    Контактируем с инспектором и доносим документы в случае
+                    запроса
+                  </p>
+                </li>
+                <li class="details__accordion-card support">
+                  <svg class="details__card-icon">
+                    <use xlink:href="assets/sprite.svg#speed"></use>
+                  </svg>
+                  <p class="details__card-text lng-details-card-text-17">
+                    Ускоряем рассмотрение вашего дела
+                  </p>
+                </li>
+              </ul>
+              <div class="details__accordion-btn-wrap">
+                <button
+                  class="details__accordion-btn legalize lng-details-accordion-btn-2"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderService"
+                >
+                  Помочь с легализацией
+                </button>
+              </div>
+              <div class="details__accordion-space"></div>
+            </div>
+          </li>
+          <li class="details__accordion-item">
+            <button class="details__accordion-control">
+              <span
+                class="details__accordion-title lng-details-accordion-title-3"
+                >Для нас нет ничего невозможного</span
+              >
+              <svg class="details__accordion-icon">
+                <use xlink:href="assets/sprite.svg#circle-btn-right"></use>
+              </svg>
+            </button>
+            <div class="details__accordion-content" id="nothing-impossible">
+              <div class="swiper-container">
+                <div class="swiper-wrapper cards">
+                  <div class="swiper-slide card" data-swiper-slide-index="0">
+                    <div class="card-img-wrap">
+                      <a
+                        href="https://www.youtube.com/watch?v=SdW1j8dfAd0"
+                        class="video-link"
+                        data-fancybox
+                        data-type="iframe"
+                      >
+                      </a>
+                      <img
+                        src="./assets/images/details/house-for-it-specialist.webp"
+                        alt="House for IT specialist"
+                      />
+                    </div>
+                    <div class="info">
+                      <div class="info__card-top">
+                        <svg class="info__icon-left">
+                          <use
+                            class="info__icon-left"
+                            xlink:href="assets/sprite.svg#arrow-left-big"
+                          ></use>
+                        </svg>
+                        <h4
+                          class="info__card-top-title lng-info-card-top-title-1"
+                        >
+                          Квартира для IT специалиста из Беларуси
+                        </h4>
+                        <svg class="info__icon-right">
+                          <use
+                            class="info__icon-right"
+                            xlink:href="assets/sprite.svg#arrow-right-big"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div class="info__card-bottom">
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-1"
+                          >
+                            Требования
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-1"
+                          >
+                            Цена, срок поиска, требования к квартире, требования
+                            к району или близость к центру.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-2"
+                          >
+                            Особенность поиска
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-2"
+                          >
+                            Работа на беларусскую компанию и необходимость в
+                            консультации по подтверждению дохода для
+                            арендодателя.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-3"
+                          >
+                            Результат
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-3"
+                          >
+                            Цена, срок поиска, наполнение и состояние квартиры,
+                            район такой, как хотел или сколько до центра.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card" data-swiper-slide-index="0">
+                    <div class="card-img-wrap">
+                      <a
+                        href="https://www.youtube.com/watch?v=gTHyFV72f90"
+                        class="video-link"
+                        data-fancybox
+                        data-type="iframe"
+                      ></a>
+                      <img
+                        src="./assets/images/details/cheap-house.webp"
+                        alt="Cheap house"
+                      />
+                    </div>
+                    <div class="info">
+                      <div class="info__card-top">
+                        <svg class="info__icon-left">
+                          <use
+                            class="info__icon-left"
+                            xlink:href="assets/sprite.svg#arrow-left-big"
+                          ></use>
+                        </svg>
+                        <h4
+                          class="info__card-top-title lng-info-card-top-title-2"
+                        >
+                          Квартира в ограниченном бюджете и с привязкой к
+                          месторасположению
+                        </h4>
+                        <svg class="info__icon-right">
+                          <use
+                            class="info__icon-right"
+                            xlink:href="assets/sprite.svg#arrow-right-big"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div class="info__card-bottom">
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-4"
+                          >
+                            Требования
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-4"
+                          >
+                            Цена, срок, район, наполнение и состояние квартир.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-5"
+                          >
+                            Особенность поиска
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-5"
+                          >
+                            Жёсткая привязка к месторасположению, ограниченный
+                            бюджет, отсутствие места работы, только приглашение.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-6"
+                          >
+                            Результат
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-6"
+                          >
+                            Цена, срок, наполнение, расположение.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card" data-swiper-slide-index="0">
+                    <div class="card-img-wrap">
+                      <a
+                        href="https://www.youtube.com/watch?v=dbyFVml_csk"
+                        class="video-link"
+                        data-fancybox
+                        data-type="iframe"
+                      ></a>
+                      <img
+                        src="./assets/images/details/house-for-family-with-kid.webp"
+                        alt="House for family with kid"
+                      />
+                    </div>
+                    <div class="info">
+                      <div class="info__card-top">
+                        <svg class="info__icon-left">
+                          <use
+                            class="info__icon-left"
+                            xlink:href="assets/sprite.svg#arrow-left-big"
+                          ></use>
+                        </svg>
+                        <h4
+                          class="info__card-top-title lng-info-card-top-title-3"
+                        >
+                          Квартира для семьи с ребёнком
+                        </h4>
+                        <svg class="info__icon-right">
+                          <use
+                            class="info__icon-right"
+                            xlink:href="assets/sprite.svg#arrow-right-big"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div class="info__card-bottom">
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-7"
+                          >
+                            Требования
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-7"
+                          >
+                            Цена, срок, район, состояние и (или) количество
+                            комнат и наполнение квартиры.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-8"
+                          >
+                            Особенность поиска
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-8"
+                          >
+                            Развитая инфроструктура для ребёнка, максимально
+                            тихий район, расположение дома далеко от шумных
+                            дорог.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-9"
+                          >
+                            Результат
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-9"
+                          >
+                            Цена, срок, состояние квартиры, район.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card" data-swiper-slide-index="0">
+                    <div class="card-img-wrap">
+                      <a
+                        href="https://www.youtube.com/watch?v=TP-e5R6vhaI"
+                        class="video-link"
+                        data-fancybox
+                        data-type="iframe"
+                      ></a>
+                      <img
+                        src="./assets/images/details/house-for-family-with-pets.webp"
+                        alt="House for family with pets"
+                      />
+                    </div>
+                    <div class="info">
+                      <div class="info__card-top">
+                        <svg class="info__icon-left">
+                          <use
+                            class="info__icon-left"
+                            xlink:href="assets/sprite.svg#arrow-left-big"
+                          ></use>
+                        </svg>
+                        <h4
+                          class="info__card-top-title lng-info-card-top-title-4"
+                        >
+                          Квартира для пары с собакой
+                        </h4>
+                        <svg class="info__icon-right">
+                          <use
+                            class="info__icon-right"
+                            xlink:href="assets/sprite.svg#arrow-right-big"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div class="info__card-bottom">
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-10"
+                          >
+                            Требования
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-10"
+                          >
+                            Цена, срок, район или близость к центру, состояние
+                            квартиры.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-11"
+                          >
+                            Особенность поиска
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-11"
+                          >
+                            Новая современная квартира, сложность в том, что
+                            арендодатели не хотят сдавать квартиры в таком
+                            состоянии семьям с домашними животными.
+                          </p>
+                        </div>
+                        <div class="info__card">
+                          <h5
+                            class="info__card-title lng-info-card-bottom-title-12"
+                          >
+                            Результат
+                          </h5>
+                          <p
+                            class="info__card-text lng-info-card-bottom-text-12"
+                          >
+                            Цена, срок, состояние, район или близость к центру.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-wrap">
+                  <div class="swiper-button-prev">
+                    <svg>
+                      <use xlink:href="assets/sprite.svg#circle-btn-left"></use>
+                    </svg>
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg>
+                      <use
+                        xlink:href="assets/sprite.svg#circle-btn-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="details__accordion-space nothing-impossible"></div>
+            </div>
+          </li>
+          <li class="details__accordion-item" id="stages">
+            <button class="details__accordion-control">
+              <span
+                class="details__accordion-title lng-details-accordion-title-4"
+                >Этапы работы</span
+              >
+              <svg class="details__accordion-icon">
+                <use xlink:href="assets/sprite.svg#circle-btn-right"></use>
+              </svg>
+            </button>
+            <div class="details__accordion-content">
+              <ul class="details__accordion-sublist">
+                <li class="details__accordion-subitem">
+                  <div class="details__subitem-control">
+                    <p
+                      class="details__subitem-title lng-details-subitem-title-1"
+                    >
+                      Удалённый поиск
+                    </p>
+                    <svg class="details__subitem-icon">
+                      <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                  <div class="details__subitem-list-wrap">
+                    <ul class="details__subitem-list">
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">01</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-1"
+                            >
+                              Консультация
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-1"
+                        >
+                          Вы озвучиваете свои требования к квартире и допустимый
+                          бюджет.
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">02</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-2"
+                            >
+                              Заключение договора
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">03</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-3"
+                            >
+                              Подбор квартир
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-3"
+                        >
+                          Подбор квартир соответствующих вашим требованиям
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">04</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-4"
+                            >
+                              Выезд на просмотры
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-4"
+                        >
+                          Выезд на просмотры с предоставлением вам видео и фото
+                          квартир и территории около дома. Во время просмотров
+                          агент выступает вашим представителем, озвучивает ваши
+                          требования, защищает ваши интересы.
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">05</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-5"
+                            >
+                              Проверка договора
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-5"
+                        >
+                          Если квартира подходит вам и арендодатель согласен на
+                          заселение - проверка договора на соответствие закону
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">06</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-6"
+                            >
+                              Отправка вам договора для ознакомления
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">07</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-7"
+                            >
+                              Подписание договора
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">08</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-8"
+                            >
+                              Оплата залога за квартиру
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">09</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-9"
+                            >
+                              Приемка-передача квартиры
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">10</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-1-10"
+                            >
+                              Заселение
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="details__accordion-subitem">
+                  <div class="details__subitem-control">
+                    <p
+                      class="details__subitem-title lng-details-subitem-title-2"
+                    >
+                      Если вы находитесь в Польше
+                    </p>
+                    <svg class="details__subitem-icon">
+                      <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                  <div class="details__subitem-list-wrap">
+                    <ul class="details__subitem-list">
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">01</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-1"
+                            >
+                              Консультация
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-6"
+                        >
+                          Вы озвучиваете свои требования к квартире и допустимый
+                          бюджет.
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">02</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-2"
+                            >
+                              Заключение договора
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">03</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-3"
+                            >
+                              Подбор квартир
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-7"
+                        >
+                          Подбор квартир соответствующих вашим требованиям
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">04</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-4"
+                            >
+                              Сопровождение вас на просмотрах
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-8"
+                        >
+                          Агент выступает как ваш представитель, озвучивает ваши
+                          требования, защищает ваши интересы.
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">05</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-5"
+                            >
+                              Проверка договора
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-9"
+                        >
+                          Если квартира вам подходит - проверка договора аренды
+                          на соответствие закону
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">06</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-6"
+                            >
+                              Подписание договора
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">07</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-7"
+                            >
+                              Приемка - передача квартиры
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">08</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-8"
+                            >
+                              Внесение оплаты за квартиру
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">09</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-2-9"
+                            >
+                              Заселение
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="details__accordion-subitem">
+                  <div class="details__subitem-control">
+                    <p
+                      class="details__subitem-title lng-details-subitem-title-3"
+                    >
+                      Получения карты побыта
+                    </p>
+                    <svg class="details__subitem-icon">
+                      <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                  <div class="details__subitem-list-wrap">
+                    <ul class="details__subitem-list">
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">01</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-1"
+                            >
+                              Консультация
+                            </p>
+                          </div>
+                          <div class="details__subitem-item-icon">
+                            <svg width="12" height="7">
+                              <use
+                                xlink:href="assets/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <p
+                          class="details__subitem-item-text lng-details-subitem-item-text-10"
+                        >
+                          Помогаем выбрать подходящие вам основание для
+                          легализации
+                        </p>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">02</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-2"
+                            >
+                              Сбор и подготовка необходимых для подачи
+                              документов
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">03</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-3"
+                            >
+                              Заполнение заявления для подачи документов в ужонд
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">04</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-4"
+                            >
+                              Подача документов в ужонд
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">05</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-5"
+                            >
+                              Контроль за рассмотрением дела
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">06</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-6"
+                            >
+                              Контакт с инспектором и донос документов в случае
+                              запроса
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">07</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-7"
+                            >
+                              Получение положительного решания от ужонда
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="details__subitem-item">
+                        <div class="details__subitem-item-contol">
+                          <div>
+                            <span class="details__subitem-number">08</span>
+                            <p
+                              class="details__subitem-item-title lng-details-subitem-title-3-8"
+                            >
+                              Получение карты побыта
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="details__accordion-btn-wrap">
+                <button
+                  class="details__accordion-btn stages lng-details-accordion-btn-3"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderService"
+                >
+                  Заказать услугу
+                </button>
+              </div>
+              <div class="details__accordion-space"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="price" id="price">
+        <div class="container">
+          <h3 class="price__title lng-price">Цены</h3>
+          <div class="price__cards">
+            <div class="price__card">
+              <div class="price__card-title-wrap">
+                <h4 class="price__card-title lng-price-card-title-1">
+                  Цена за удалённый поиск жилья
+                </h4>
+                <p class="price__card-subtitle lng-price-card-subtitle-1">
+                  поиск жилья, когда вы не находитесь в городе, в котором ищем
+                  жильё и не выезжаете на просмотры с агентом
+                </p>
+              </div>
+              <ul class="price__card-list">
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-1">
+                    Консультация
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-2">
+                    Просмотры жилья с предоставлением вам фото/видео
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-3">
+                    Проверка договора аренды
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-4">
+                    Согласование условий договора аренды, выгодных для наших
+                    клиентов
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-5">
+                    Удаленное подписание договора аренды. Оплата залога (кауции)
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-1-6">
+                    Заселение. Подписание акта приемки-передачи квартиры
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text">
+                    <span
+                      class="price__item-accent-text lng-price-item-text-1-7"
+                      >Бесплатное оформление</span
+                    ><span>&nbsp;</span
+                    ><span class="lng-price-item-text-1-8"
+                      >мельдунка, песеля и р/с.</span
+                    >
+                  </p>
+                </li>
+              </ul>
+              <div class="price__sale-wrap">
+                <p class="price__sale">-75%</p>
+                <p class="price__sale-desc lng-price-item-text-1-9">
+                  от общей суммы аренды за месяц (аренда плюс коммунальные
+                  услуги)
+                </p>
+              </div>
+              <button
+                class="price__btn price__button lng-price-btn-1"
+                type="button"
+                data-value="Удаленный поиск жилья в аренду"
+                data-bs-toggle="modal"
+                data-bs-target="#orderService"
+              >
+                Заказать услугу
+              </button>
+            </div>
+            <div class="price__card">
+              <div class="price__card-title-wrap">
+                <h4 class="price__card-title lng-price-card-title-2">
+                  Цена за поиск жилья на месте
+                </h4>
+                <p class="price__card-subtitle lng-price-card-subtitle-2">
+                  поиск жилья когда вы находитесь в городе, в котором ищем жильё
+                  и выезжаете на просмотры с агентом
+                </p>
+              </div>
+              <ul class="price__card-list">
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-1">
+                    Консультация
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-2">
+                    Просмотры жилья с сопровождением агента
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-3">
+                    Проверка договора аренды
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-4">
+                    Согласование условий договора аренды, выгодных для наших
+                    клиентов
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-5">
+                    Подписание договора аренды. Оплата залога (кауции)
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text lng-price-item-text-2-6">
+                    Заселение. Подписание акта приемки-передачи квартиры
+                  </p>
+                </li>
+                <li class="price__list-item">
+                  <div class="price__item-icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="assets/sprite.svg#ellipse"></use>
+                    </svg>
+                  </div>
+                  <p class="price__item-text">
+                    <span
+                      class="price__item-accent-text lng-price-item-text-2-7"
+                      >Бесплатное оформление</span
+                    ><span>&nbsp;</span
+                    ><span class="lng-price-item-text-2-8"
+                      >мельдунка, песеля и р/с.</span
+                    >
+                  </p>
+                </li>
+              </ul>
+              <div class="price__sale-wrap">
+                <p class="price__sale">-60%</p>
+                <p class="price__sale-desc lng-price-item-text-2-9">
+                  от общей суммы аренды за месяц (аренда плюс коммунальные
+                  услуги)
+                </p>
+              </div>
+              <button
+                class="price__btn price__button lng-price-btn-2"
+                type="button"
+                data-value="Поиск жилья в аренду на месте"
+                data-bs-toggle="modal"
+                data-bs-target="#orderService"
+              >
+                Заказать услугу
+              </button>
+            </div>
+          </div>
+          <div class="price__legalize">
+            <h4 class="price__legalize-title lng-price-legalize-title">
+              Легализация
+            </h4>
+            <div class="price__legalize-cards">
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-1"
+                >
+                  Карта побыта по работе, учебе, гуманитарная, по воссоединению
+                  семьи (karta czasowego pobytu) / полное сопровождение
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">1500 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-1"
+                    type="button"
+                    data-value="Карта побыта по работе, учебе, гуманитарная, по воссоединению
+                  семьи (karta czasowego pobytu) / полное сопровождение"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-2"
+                >
+                  Карта побыта по бизнесу / полное сопровождение
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">2000 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-2"
+                    type="button"
+                    data-value="Карта побыта по бизнесу / полное сопровождение"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-3"
+                >
+                  Карта постоянного вида на жительство (karta stałego pobytu) /
+                  полное сопровождение
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">1200 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-3"
+                    type="button"
+                    data-value="Карта постоянного вида на жительство (karta stałego pobytu) /
+                  полное сопровождение"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-4"
+                >
+                  Карта поляка / полное сопровождение
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">1200 - 1500 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-4"
+                    type="button"
+                    data-value="Карта поляка / полное сопровождение"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-5"
+                >
+                  Консультация по легализации
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">1200 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-5"
+                    type="button"
+                    data-value="Консультация по легализации"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__legalize-card">
+                <p
+                  class="price__legalize-card-text lng-price-legalize-card-text-6"
+                >
+                  Заполние заявления для ужонда (карта побыта, карта поляка)
+                </p>
+                <div class="price__legalize-card-bottom">
+                  <p class="price__legalize-card-price">1200 zł</p>
+                  <button
+                    class="price__legalize-card-btn price__button lng-price-legalize-card-btn-6"
+                    type="button"
+                    data-value="Заполние заявления для ужонда (карта побыта, карта поляка)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="price__additional">
+            <h4 class="price__additional-title lng-price-additional-title">
+              Дополнительные услуги
+            </h4>
+            <div class="price__additional-cards">
+              <div class="price__additional-card">
+                <div class="price__additional-card-text-wrap">
+                  <p
+                    class="price__additional-card-text lng-price-additional-card-text-1"
+                  >
+                    Открытие банковского счета
+                  </p>
+                  <p
+                    class="price__additional-card-subtext lng-price-additional-card-subtext-1"
+                  >
+                    (для наших клиентов бесплатно)
+                  </p>
+                </div>
+                <div class="price__additional-card-bottom">
+                  <p class="price__additional-card-price">200 zł</p>
+                  <button
+                    class="price__additional--card-btn price__button lng-price-additional-card-btn-1"
+                    type="button"
+                    data-value="Открытие банковского счета"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__additional-card">
+                <div class="price__additional-card-text-wrap">
+                  <p
+                    class="price__additional-card-text lng-price-additional-card-text-2"
+                  >
+                    Песель/мельдунок
+                  </p>
+                  <p
+                    class="price__additional-card-subtext lng-price-additional-card-subtext-2"
+                  >
+                    (для наших клиентов бесплатно)
+                  </p>
+                </div>
+                <div class="price__additional-card-bottom">
+                  <p class="price__additional-card-price">200 zł</p>
+                  <button
+                    class="price__additional--card-btn price__button pesel-meldunk lng-price-additional-card-btn-2"
+                    type="button"
+                    data-value="Оформление песеля, Оформление мельдунка (прописки)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__additional-card">
+                <div class="price__additional-card-text-wrap">
+                  <p
+                    class="price__additional-card-text lng-price-additional-card-text-3"
+                  >
+                    Найм окказиональный (резервный адрес)
+                  </p>
+                  <p
+                    class="price__additional-card-subtext lng-price-additional-card-subtext-3"
+                  >
+                    (дополнительно услуги нотариуса-около 500 zł, услуги
+                    присяжного переводчика - 200-300 zł)
+                  </p>
+                </div>
+                <div class="price__additional-card-bottom">
+                  <p class="price__additional-card-price">200 zł</p>
+                  <button
+                    class="price__additional--card-btn price__button lng-price-additional-card-btn-3"
+                    type="button"
+                    data-value="Найм окказиональный (резервный адрес)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+              <div class="price__additional-card">
+                <div class="price__additional-card-text-wrap">
+                  <p
+                    class="price__additional-card-text lng-price-additional-card-text-4"
+                  >
+                    Оформление детей в сад/школу
+                  </p>
+                </div>
+                <div class="price__additional-card-bottom">
+                  <p class="price__additional-card-price">200 zł</p>
+                  <button
+                    class="price__additional--card-btn price__button lng-price-additional-card-btn-4"
+                    type="button"
+                    data-value="Оформление детей в сад/школу"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderService"
+                  >
+                    Заказать услугу
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team">
+        <div class="container">
+          <h4 class="team__title lng-team-title">Наша команда</h4>
+          <div class="team__container">
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-1.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-1">Олеся</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-1">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-1">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-2.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-2">Анна</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-2">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-2">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-3.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-3">Александр</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-3">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-3">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-4.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-4">Николай</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-4">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-4">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-5.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-5">Дмитрий</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-5">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-5">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+            <div class="team__card">
+              <img
+                class="team__card-img"
+                src="./assets/images/team/member-6.webp"
+                alt="Team member"
+              />
+              <div class="team__card-desc">
+                <div class="team__card-top">
+                  <p class="team__card-name lng-team-card-name-6">Мария</p>
+                  <div class="team__card-location">
+                    <svg class="team__location-icon">
+                      <use xlink:href="assets/sprite.svg#location"></use>
+                    </svg>
+                    <p class="team__location-place lng-team-location-place-6">
+                      Варшава
+                    </p>
+                  </div>
+                </div>
+                <p class="team__card-resp lng-team-card-resp-6">
+                  с какимито вопросами помогает
+                </p>
+              </div>
+              <div class="team__card-bg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedbacks" id="feedbacks">
+        <div class="container">
+          <div class="feedbacks__wrap">
+            <h4 class="feedbacks__title lng-feedbacks">Отзывы</h4>
+            <div class="swiper feedbacks__swiper">
+              <div class="swiper-wrapper feedbacks__swiper-wrap">
+                <div class="swiper-slide feedbacks__swiper-slide">
+                  <p class="feedbacks__slide-name lng-feedbacks-name-1">Илья</p>
+                  <div class="feedbacks__slide-details">
+                    <div class="feedbacks__slide-location">
+                      <div class="feedbacks__location-icon">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/sprite.svg#location"></use>
+                        </svg>
+                      </div>
+                      <p
+                        class="feedbacks__location-place lng-feedbacks-location-place-1"
+                      >
+                        Варшава
+                      </p>
+                    </div>
+                    <p
+                      class="feedbacks__details-text lng-feedbacks-details-text-1"
+                    >
+                      Удалённый поиск квартиры для одного человека
+                    </p>
+                  </div>
+                  <p
+                    class="feedbacks__slide-feedback lng-feedbacks-slide-feedback-1"
+                  >
+                    Спасибо Виктории и Евгению что помогли с жильем в Познани,
+                    пытался сам искать, но столкнулся с проблемой удаленного
+                    поиска, из-за чего решил обратиться к агентству wizen
+                    nieruchomosci polska, были найдены прекрасные квартиры, одну
+                    из которых нам удалось взять, квартира чистая, тихая, в
+                    прекрасном районе, со всей дополнительной техникой и
+                    посудой, отдельное спасибо за сопровождения с получением
+                    первоначальных документов для жизни в Польше. Я думаю я
+                    после к вам обращусь&#9786; мне легализация
+                    предстоит...&#9786;
+                  </p>
+                </div>
+                <div class="swiper-slide feedbacks__swiper-slide">
+                  <p class="feedbacks__slide-name lng-feedbacks-name-2">Анна</p>
+                  <div class="feedbacks__slide-details">
+                    <div class="feedbacks__slide-location">
+                      <div class="feedbacks__location-icon">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/sprite.svg#location"></use>
+                        </svg>
+                      </div>
+                      <p
+                        class="feedbacks__location-place lng-feedbacks-location-place-2"
+                      >
+                        Краков
+                      </p>
+                    </div>
+                    <p
+                      class="feedbacks__details-text lng-feedbacks-details-text-2"
+                    >
+                      Поиск квартиры на месте для мамы с ребенком 14 лет и котом
+                    </p>
+                  </div>
+                  <p
+                    class="feedbacks__slide-feedback lng-feedbacks-slide-feedback-2"
+                  >
+                    Пробовала найти квартиру сама,но незнание языка "тормозило"
+                    процесс, решила обратиться к риелтору, случайно нашла в
+                    инстаграме и не пожалела, мой агент была Татьяна, ни разу не
+                    пожалела о своем выборе, у меня было очень много требований
+                    к квартире, район, цена, кот, но благодаря Татьяне мы нашли
+                    ту квартиру, именно которую мы хотели, всё меня устроило в
+                    квартире по наполнению, цена, район. Я очень осталась
+                    довольна&#9786;
+                  </p>
+                </div>
+              </div>
+              <div class="feedbacks__swiper-button-wrap">
+                <div class="swiper-button-prev feedbacks__swiper-button-prev">
+                  <svg class="feedbacks__button-prev">
+                    <use xlink:href="assets/sprite.svg#circle-btn-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next feedbacks__swiper-button-next">
+                  <svg class="feedbacks__button-next">
+                    <use xlink:href="assets/sprite.svg#circle-btn-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq" id="faq">
+        <div class="container">
+          <h4 class="faq__title">FAQ</h4>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">01</p>
+                <p class="faq__item-text lng-faq-item-text-1">
+                  В каких городах есть ваши агенты?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-1">
+                Наши агенты работают в Варшаве, Кракове, Вроцлаве, Гданьске,
+                Познани и Лодзи. Можем также организовать онлайн сопровождение
+                по территории всей Польши.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">02</p>
+                <p class="faq__item-text lng-faq-item-text-2">
+                  Есть ли у вас предоплата?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-2">
+                Нет, наши клиенты не платят предоплату. Услуги агента
+                оплачиваются в момент заселения.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">03</p>
+                <p class="faq__item-text lng-faq-item-text-3">
+                  Вы работаете официально?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-3">
+                Да, с клиентами заключается договор и мы несём перед вами полную
+                юридическую ответственность.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">04</p>
+                <p class="faq__item-text lng-faq-item-text-4">
+                  Какая гарантия при удалённом заселении, что не получится
+                  ожидание/реальность?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-4">
+                Вы получаете подробные видеообзоры каждой комнаты, её
+                наполнения, всех недостатков и пояснения по ним. Чтобы вы могли
+                решить, допустимы они для вас либо нет.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">05</p>
+                <p class="faq__item-text lng-faq-item-text-5">
+                  Сколько длится поиск квартиры?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-5">
+                Поиск вашей квартиры занимает от 1 до 14 дней, в зависимости от
+                ваших требований и состава семьи.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">06</p>
+                <p class="faq__item-text lng-faq-item-text-6">
+                  Как внести предоплату за квартиру, если я нахожусь за
+                  пределами Польши?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-6">
+                Наиболее выгодный способ оплаты - попросить знакомых сделать
+                перевод с карты польского банка. Так же можно делать перевод с
+                Альфа-банка (для граждан Беларуси) либо с карты Revolut
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">07</p>
+                <p class="faq__item-text lng-faq-item-text-7">
+                  Какой примерно срок получения карты побыта от момента
+                  обращения?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-7">
+                Всё зависит от ужонда, в который обращаетесь и оснований для
+                легализации. В среднем 4-6 месяцев.
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">08</p>
+                <p class="faq__item-text lng-faq-item-text-8">
+                  Сколько нужно платить за рассмотрение дела в ужонде?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-8">
+                Всё зависит от основания легализации. Для карты побыта по работе
+                это 440 злотых за рассмотрение дела и 100 злотых за распечатку
+                карты (пластик)
+              </p>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-control">
+                <p class="faq__item-number">09</p>
+                <p class="faq__item-text lng-faq-item-text-9">
+                  Какой список документов необходим для подачи на карту побыта?
+                </p>
+                <svg class="faq__item-icon">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <p class="faq__item-content lng-faq-item-content-9">
+                Всё индивидуально, обращайтесь за консультацией и мы с
+                удовольствием вам поможем разобраться.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__logo-wrap">
+            <div class="footer__desk-logo-link">
+              <svg class="footer__desk-logo-img">
+                <use xlink:href="assets/sprite.svg#desk-logo"></use>
+              </svg>
+            </div>
+            <div class="footer__tablet-logo-link">
+              <svg class="footer__tablet-logo-img">
+                <use xlink:href="assets/sprite.svg#tablet-logo"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__menu-wrap">
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="#why-us" class="footer__nav-link lng-footer-why-us"
+                    >Почему мы?</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a
+                    href="#services"
+                    class="footer__nav-link lng-footer-services"
+                    >Услуги</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#stages" class="footer__nav-link lng-footer-stages"
+                    >Этапы</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#price" class="footer__nav-link lng-footer-price"
+                    >Цены</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a
+                    href="#feedbacks"
+                    class="footer__nav-link lng-footer-feedbacks"
+                    >Отзывы</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#faq" class="footer__nav-link">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__contacts">
+            <p class="footer__contacts-title lng-footer-contacts-title">
+              Контакты
+            </p>
+            <div class="footer__contacts-wrap">
+              <a href="tel:+48111111111" class="footer__phone"
+                >+48 111 111 111</a
+              >
+              <a href="mailto:wizensupport@gmail.com" class="footer__email"
+                >wizensupport@gmail.com</a
+              >
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__social-links">
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a
+                    class="footer__social-link"
+                    href="https://www.facebook.com/wizenpolska"
+                    target="_blank"
+                  >
+                    <svg class="footer__facebook-icon">
+                      <use xlink:href="assets/sprite.svg#facebook-dark"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a
+                    href="https://www.instagram.com/wizen_nieruchomosci_polska/"
+                    class="footer__social-link"
+                    target="_blank"
+                  >
+                    <svg class="footer__instagram-icon">
+                      <use xlink:href="assets/sprite.svg#instagram-dark"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a
+                    href="https://t.me/wizen_polska"
+                    class="footer__social-link footer__telegram-link"
+                    target="_blank"
+                  >
+                    <svg class="footer__telegram-icon">
+                      <use xlink:href="assets/sprite.svg#telegram-dark"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__information">
+              <a class="footer__information-link" href="#" target="_blank"
+                >Privacy Policy</a
+              >
+              <a class="footer__information-link" href="#" target="_blank"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="modal fade freeAdvice-modal"
+      id="freeAdvice"
+      tabindex="-1"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content freeAdvice-modal__content">
+          <button
+            type="button"
+            class="freeAdvice-modal__close-icon"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <svg>
+              <use xlink:href="assets/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <div class="modal-header freeAdvice-modal__header">
+            <h3 class="freeAdvice-modal__title lng-freeAdvice-modal-title">
+              Бесплатная консультация
+            </h3>
+          </div>
+          <div class="modal-body freeAdvice-modal__body">
+            <form id="freeAdvice-form">
+              <div class="freeAdvice-modal__input-wrap">
+                <label
+                  for="freeAdvice-name"
+                  class="form-label freeAdvice-modal__form-label lng-freeAdvice-modal-form-label-1"
+                  >Имя</label
+                >
+                <input
+                  type="text"
+                  class="form-control freeAdvice-modal__input"
+                  id="freeAdvice-name"
+                />
+                <p
+                  class="freeAdvice-modal__error-msg hide"
+                  id="error-name-msg"
+                ></p>
+                <svg class="freeAdvice-modal__error-icon">
+                  <use xlink:href="assets/sprite.svg#error"></use>
+                </svg>
+              </div>
+              <div class="freeAdvice-modal__input-wrap">
+                <label
+                  for="freeAdvice-phone"
+                  class="form-label freeAdvice-modal__form-label lng-freeAdvice-modal-form-label-2"
+                  >Номер телефона</label
+                >
+                <input
+                  type="text"
+                  class="form-control freeAdvice-modal__input"
+                  id="freeAdvice-phone"
+                  placeholder="__ __ __"
+                />
+                <p
+                  class="freeAdvice-modal__error-msg hide"
+                  id="error-phone-msg"
+                ></p>
+                <svg class="freeAdvice-modal__error-icon">
+                  <use xlink:href="assets/sprite.svg#error"></use>
+                </svg>
+              </div>
+              <div class="modal-footer freeAdvice-modal__footer">
+                <button type="submit" class="btn lng-freeAdvice-modal-btn">
+                  Получить бесплатную консультацию
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade orderService-modal"
+      id="orderService"
+      tabindex="-1"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content orderService-modal__content">
+          <button
+            type="button"
+            class="orderService-modal__close-icon"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <svg>
+              <use xlink:href="assets/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <div class="modal-header orderService-modal__header">
+            <h3 class="orderService-modal__title lng-orderService-modal-title">
+              Заказать услугу
+            </h3>
+            <p>
+              <span
+                class="orderService-modal__subtitle lng-orderService-modal-subtitle"
+                >У вас есть возможность заказать сразу</span
+              >
+              <span
+                class="orderService-modal__subtitle_accent lng-orderService-modal-subtitle_accent"
+                >несколько услуг</span
+              >
+            </p>
+          </div>
+          <div class="modal-body orderService-modal__body">
+            <form id="orderService-form">
+              <div class="orderService-modal__input-wrap">
+                <label
+                  for="orderService-service"
+                  class="form-label orderService-modal__form-label lng-orderService-modal-form-label-1"
+                  >Услуга</label
+                >
+                <details
+                  class="action-service__multiselect orderService-modal__input details orderService-modal__multiselect"
+                >
+                  <summary
+                    class="orderService-modal__summary lng-orderService-modal-summary"
+                  >
+                    Услуга
+                  </summary>
+                  <div
+                    class="action-service__multiselect-dropdown orderService-modal__multiselect-dropdown"
+                  >
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Покупка недвижимости"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-1"
+                        >Покупка недвижимости</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Продажа недвижимости"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-2"
+                        >Продажа недвижимости</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Удаленный поиск жилья в аренду"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-3"
+                        >Удаленный поиск жилья в аренду</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Поиск жилья в аренду на месте"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-4"
+                        >Поиск жилья в аренду на месте</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Карта побыта по бизнесу / полное сопровождение"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-5"
+                        >Карта побыта по бизнесу / полное сопровождение</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Карта побыта по работе, учебе, гуманитарная, по воссоединению семьи (karta czasowego pobytu) / полное сопровождение"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-6"
+                        >Карта побыта по работе, учебе, гуманитарная, по
+                        воссоединению семьи (karta czasowego pobytu) / полное
+                        сопровождение</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Карта постоянного вида на жительство (karta stałego pobytu) / полное сопровождение"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-7"
+                        >Карта постоянного вида на жительство (karta stałego
+                        pobytu) / полное сопровождение</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Карта поляка / полное сопровождение"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-8"
+                        >Карта поляка / полное сопровождение</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Консультация по легализации"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-9"
+                        >Консультация по легализации</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Заполние заявления для ужонда (карта побыта, карта поляка)"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-10"
+                        >Заполние заявления для ужонда (карта побыта, карта
+                        поляка)</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Открытие банковского счета"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-11"
+                        >Открытие банковского счета</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Оформление песеля"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-12"
+                        >Оформление песеля</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Оформление мельдунка (прописки)"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-13"
+                        >Оформление мельдунка (прописки)</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Найм окказиональный (резервный адрес)"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-14"
+                        >Найм окказиональный (резервный адрес)</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        hidden
+                        name="select"
+                        value="Оформление детей в сад/школу"
+                      />
+                      <span
+                        class="action-service__multiselect-content lng-action-service-multiselect-content-15"
+                        >Оформление детей в сад/школу</span
+                      >
+                      <svg class="action-service__icon" width="15" height="11">
+                        <use xlink:href="assets/sprite.svg#check-icon"></use>
+                      </svg>
+                    </label>
+                  </div>
+                </details>
+                <p
+                  class="orderService-modal__error-msg hide"
+                  id="error-services-msg"
+                ></p>
+                <svg class="orderService-modal__error-icon">
+                  <use xlink:href="assets/sprite.svg#error"></use>
+                </svg>
+                <div
+                  class="orderService-modal__services-options"
+                  id="orderService__services-options"
+                ></div>
+              </div>
+              <div class="orderService-modal__input-wrap">
+                <label
+                  for="orderService-phone"
+                  class="form-label orderService-modal__form-label lng-orderService-modal-form-label-2"
+                  >Номер телефона</label
+                >
+                <input
+                  type="text"
+                  class="form-control orderService-modal__input"
+                  id="orderService-phone"
+                  placeholder="__ __ __"
+                />
+                <p
+                  class="orderService-modal__error-msg hide"
+                  id="error-phone-service-msg"
+                ></p>
+                <svg class="orderService-modal__error-icon">
+                  <use xlink:href="assets/sprite.svg#error"></use>
+                </svg>
+              </div>
+              <div class="orderService-modal__input-wrap">
+                <label
+                  for="orderService-comments"
+                  class="form-label orderService-modal__form-label lng-orderService-modal-form-label-3"
+                  >Комментарий</label
+                >
+                <textarea
+                  class="form-control orderService-modal__textarea"
+                  name="comments"
+                  id="orderService-comments"
+                  placeholder="Введите комментарий"
+                  maxlength="1000"
+                ></textarea>
+                <div
+                  class="orderService-modal__textarea-counter"
+                  id="orderService__textarea-counter"
+                >
+                  0/1000
+                </div>
+              </div>
+              <div class="modal-footer orderService-modal__footer">
+                <button type="submit" class="btn lng-orderService-modal-btn">
+                  Заказать услугу
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/vendor/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.4/build/js/intlTelInput.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/lang.js"></script>
+  </body>
+</html>

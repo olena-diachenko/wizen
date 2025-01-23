@@ -1,0 +1,175 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.about-us {
+    padding: 100px 0 150px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 140px;
+    }
+
+    &__text-title {
+        font-family: $accent-font;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+    }
+
+    &__btn {
+        margin-top: 32px;
+        width: 310px;
+        height: 72px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $light-text-color;
+        background-color: $accent-bgcolor;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $btn-hover-bgcolor;
+        }
+
+        &:active {
+            background-color: $clicked-btn-bgcolor;
+        }
+    }
+
+    &__photos-wrap {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__photo {
+        position: relative;
+        width: 296px;
+        height: 590px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.39%, #000000 100%);
+            border-radius: 24px;
+            z-index: 1;
+        }
+
+        &:first-child::after {
+            content: "Victoria";
+            position: absolute;
+            z-index: 2;
+            font-family: $accent-font;
+            color: $light-text-color;
+            font-size: 48px;
+            line-height: 59px;
+            bottom: 108px;
+            left: -40px;
+            transform: rotate(-90deg);
+        }
+
+        &:last-child::after {
+            content: "Yevhen";
+            position: absolute;
+            z-index: 1;
+            font-family: $accent-font;
+            color: $light-text-color;
+            font-size: 48px;
+            line-height: 59px;
+            bottom: 102px;
+            left: -40px;
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__img {
+        border-radius: 24px;
+        width: 296px;
+        height: auto;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        padding: 76px 0 100px;
+
+        &__wrap {
+            justify-content: space-between;
+            gap: 64px;
+        }
+    
+        &__text-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__text-title {
+            margin-bottom: 16px;
+        }
+
+        &__photos-wrap {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__photo {
+            width: 384px;
+            height: 289px;
+
+            &:first-child::after,
+            &:last-child::after {
+                font-size: 32px;
+                line-height: 40px;
+                bottom: 78px;
+                left: -16px;
+            }
+        }
+
+        &__img {
+            width: 384px;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {
+
+        &__photo {
+            width: 268px;
+            height: 341px;
+        }
+
+        &__img {
+            width: 268px;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        padding: 54px 0;
+
+        &__text-title {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 16px;
+        }
+
+        &__btn {
+            width: 312px;
+            height: 64px;
+            margin-top: 16px;
+        }
+
+        &__photos-wrap {
+            display: none;
+        }
+    }
+}

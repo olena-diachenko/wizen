@@ -1,0 +1,221 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.action-service {
+    color: $light-text-color;
+    min-height: 368px;
+    max-height: 368px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        background-color: $dark-bgcolor;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        padding: 64px 104px 74px;
+        width: 65%;
+    }
+
+    &__img-wrap {
+        background-image: url('../assets/images/action-service/house.webp');
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+    &__title {
+        font-family: $accent-font;
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__multiselect {
+        display: inline-block;
+        position: relative;
+        margin-right: 32px;
+        width: 412px;
+        border: 1px solid $icon-bgcolor;
+        border-radius: 4px;
+        cursor: pointer;
+
+        & > summary {
+            padding: 25px 24px;
+            list-style: none;
+        }
+
+        & > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 7px;
+            background: url("../assets/svg/chevron-down-light.svg") 100% 100%;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        &_active {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+    }
+
+    &__multiselect-dropdown {
+        position: absolute;
+        z-index: 2;
+        min-width: 100%;
+        background-color: $main-bgcolor;
+        color: $main-text-color;
+        border-radius: 0 0 16px 16px;
+        height: 265px;
+        overflow: scroll;
+        scrollbar-color: $accent-bgcolor $accent-bgcolor;
+        scrollbar-width: thin;
+
+        & > label {
+            margin: 0;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $item-hover-bgcolor;
+            }
+
+            & > input:checked + .action-service__multiselect-content + .action-service__icon {
+                display: block;
+            }
+        }
+    }
+
+    &__multiselect-content {
+        display: block;
+        width: fit-content;
+    }
+
+    &__btn {
+        width: 216px;
+        height: 72px;
+        border-radius: 8px;
+        background-color: $accent-bgcolor;
+        color: $light-text-color;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $btn-hover-bgcolor;
+        }
+    
+        &:active {
+            background-color: $clicked-btn-bgcolor;
+        }
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        min-height: 314px;
+        max-height: 314px;
+
+        &__content {
+            padding: 56px 32px 74px 40px;
+            width: 83%;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__multiselect {
+            width: 320px;
+            height: auto;
+
+            & > summary {
+                padding: 20px 24px;
+            }
+        }
+
+        &__btn {
+            width: 216px;
+            height: 64px;
+        }
+
+        &__img-wrap {
+            min-width: 128px;
+            max-width: 500px;
+            height: 314px;
+            width: 100%;
+            background-position-x: right;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        min-height: 255px;
+        max-height: 284px;
+
+        &__wrap {
+            min-width: 360px;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 24px;
+        }
+
+        &__content {
+            width: 100%;
+            padding: 32px 24px 48px;
+        }
+
+        &__form {
+            flex-direction: column;
+        }
+
+        &__multiselect {
+            width: 312px;
+            margin-right: 0;
+            margin-bottom: 16px;
+
+            &>summary {
+                padding: 16.5px 24px;
+            }
+        }
+
+        &__btn {
+            width: 312px;
+            height: 64px;
+        }
+
+        &__img-wrap {
+            display: none;
+        }
+    }
+}

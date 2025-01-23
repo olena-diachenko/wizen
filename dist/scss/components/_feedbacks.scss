@@ -1,0 +1,105 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.feedbacks {
+    &__wrap {
+        border-radius: 24px;
+        padding: 54px 112px;
+        background-color: $dark-bgcolor;
+        color: $light-text-color;
+    }
+
+    &__title {
+        font-family: $accent-font;
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 40px;
+    }
+
+    &__slide-name {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+
+    &__slide-details,
+    &__slide-location {
+        display: flex;
+    }
+
+    &__slide-details {
+        margin-bottom: 24px;
+    }
+
+    &__slide-location {
+        margin-right: 32px;
+    }
+
+    &__location-icon {
+        margin-right: 4px;
+    }
+
+    &__details-text {
+        color: $icon-hover;
+    }
+
+    &__swiper-button-wrap {
+        display: flex;
+        gap: 32px;
+        margin-top: 32px;
+        height: 40px;
+    }
+
+    &__button-prev,
+    &__button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        &__wrap {
+            padding: 54px 40px;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__swiper-button-wrap {
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        &__wrap {
+            padding: 24px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 32px;
+        }
+
+        &__slide-name {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        &__slide-details {
+            flex-direction: column;
+        }
+
+        &__location {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+
+        &__location-icon {
+            margin-right: 4px;
+        }
+    }
+}

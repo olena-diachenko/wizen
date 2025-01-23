@@ -1,0 +1,192 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.more-than {
+    height: 449px;
+    margin-top: 714px;
+
+    & > .container {
+        background-color: $secondary-bgcolor;
+        height: 100%;
+    }
+
+    &__text-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -521px;
+        margin-top: -45px;
+    }
+
+    &__bg {
+        position: relative;
+        justify-content: center;
+
+        & > p {
+            font-family: $accent-font;
+            font-size: 314px;
+            line-height: 388px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            color: $bg-text-color;
+        }
+    }
+
+    &__text-wrap {
+        position: relative;
+        z-index: 3;
+        display: flex;
+
+        &:first-child {
+            margin-right: 88px;
+        }
+    }
+
+    &__text {
+        font-family: $main-font;
+        margin-right: 8px;
+        font-weight: 700;
+        font-size: 196px;
+        line-height: 260px;
+        height: 200px;
+        cursor: pointer;
+        text-align: center;
+
+        &.first {
+            width: 339px;
+        }
+    
+        &.second {
+            width: 226px;
+        }
+    }
+
+    &__text-accent {
+        align-self: flex-end;
+        width: 200px;
+
+        &.first {
+            width: 173px;
+        }
+    }
+
+    &__subtext-accent {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        height: 288px;
+        margin-top: 738px;
+
+        &__text-container {
+            margin-left: -230px;
+            margin-top: -62px;
+        }
+
+        &__bg {
+
+            & > p {
+                font-size: 232px;
+                line-height: 287px;
+            }
+        }
+
+        &__text-wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            font-size: 96px;
+            line-height: 128px;
+            height: 100px;
+            margin-right: 0;
+            margin-bottom: 8px;
+
+            &.first {
+                width: 166px;
+                text-align: center;
+            }
+
+            &.second {
+                width: 111px;
+            }
+        }
+
+        &__text-accent {
+            text-align: center;
+            align-self: unset;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {
+        height: 296px;
+        margin-top: 499px;
+
+        &__text-container {
+            margin-top: -20px;
+        }
+
+        &__bg {
+
+            & > p {
+                font-size: 164px;
+                line-height: 202px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        height: 318px;
+        margin-top: 446px;
+
+        &__text-container {
+            flex-direction: column;
+            margin-top: -60px;
+            margin-left: -100px;
+        }
+
+        &__bg {
+            padding-top: 0;
+
+            & > p {
+                font-size: 80px;
+                line-height: 98px;
+            }
+        }
+
+        &__text-wrap {
+            &:first-child {
+                margin-right: 0;
+            }
+
+            &.first {
+                padding-top: 50px;
+            }
+
+            &.second {
+                margin-top: 18px;
+            }
+        }
+
+        &__text {
+            font-size: 64px;
+            line-height: normal;
+            height: fit-content;
+            margin-bottom: 0;
+
+            &.first {
+                width: 111px;
+            }
+        
+            &.second {
+                width: 74px;
+            }
+        }
+    }
+}

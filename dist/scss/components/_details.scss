@@ -1,0 +1,445 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.details {
+    &__accordion-list {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__accordion-item {
+        margin-top: -22px;
+        position: relative;
+        border-radius: 24px 24px 0 0;
+
+        &:first-child {
+            background-color: $dark-gray-bgcolor;
+        }
+
+        &:nth-child(2) {
+            background-color: $medium-gray-bgcolor;
+        }
+
+        &:nth-child(3) {
+            background-color: $soft-gray-bgcolor;
+        }
+
+        &:last-child {
+            background-color: $light-gray-bgcolor;
+        }
+    }
+
+    &__accordion-control {
+        color: $light-text-color;
+        padding: 80px 104px 104px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: none;
+        cursor: unset !important;
+
+        &.open {
+            padding: 80px 104px 48px;
+        }
+
+        &.open ~ .details__accordion-content {
+            padding: 0 104px;
+            opacity: 1;
+        }
+
+        &.open > .details__accordion-icon {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__accordion-title {
+        width: 70%;
+        text-align: left;
+        font-family: $accent-font;
+        font-size: 36px;
+        line-height: 44px;
+        color: $light-text-color;
+    }
+
+    &__accordion-icon {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    &__accordion-content {
+        padding: 0 104px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        will-change: max-height;
+        transition: all 0.5s ease-out;
+    }
+
+    &__accordion-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 16px;
+
+        &.house-hunting,
+        &.legalize {
+            margin-bottom: 80px;
+        }
+
+        &.help,
+        &.support {
+            margin: 40px 0;
+        }
+
+        &.help.legalize {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__accordion-card {
+        border-radius: 24px;
+        padding: 40px 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &.house-hunting {
+            background-color: $medium-gray-bgcolor;
+            color: $light-text-color;
+        }
+
+        &.help,
+        &.support {
+            background-color: $main-bgcolor;
+        }
+
+        &.legalize {
+            background-color: $soft-gray-bgcolor;
+            color: $light-text-color;
+        }
+    }
+
+    &__card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__accordion-btn-wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__accordion-btn {
+        width: 239px;
+        height: 72px;
+        border-radius: 8px;
+        color: $light-text-color;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23.94px;
+        background-color: $accent-bgcolor;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $btn-hover-bgcolor;
+        }
+
+        &.legalize {
+            width: 293px;
+        }
+
+        &.stages {
+            width: 216px;
+        }
+    }
+
+    &__accordion-space {
+        width: 100%;
+        height: 60px;
+
+        &.nothing-impossible {
+            height: 120px;
+        }
+    }
+
+    &__accordion-sublist {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__accordion-subitem {
+        background-color: $icon-bgcolor;
+        border-radius: 24px;
+    }
+
+    &__subitem-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        transition: all 0.5s ease-out;
+
+        &.show {
+            padding: 40px 40px 24px;
+        }
+
+        &.show ~ .details__subitem-list-wrap {
+            padding: 0 40px 40px;
+            opacity: 1;
+        }
+    
+        &.show > .details__subitem-icon {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__subitem-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__subitem-icon {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+
+    &__subitem-list-wrap {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        will-change: max-height;
+        transition: all 0.5s ease-out;
+        padding: 0 40px;
+    }
+
+    &__subitem-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    &__subitem-item {
+        border-radius: 8px;
+        padding: 16px 30px 16px 40px;
+        background-color: $main-bgcolor;
+    }
+
+    &__subitem-item-contol {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s ease-out;
+
+        & > div {
+            display: flex;
+        }
+
+        &.show ~ .details__subitem-item-text {
+            padding: 16px 0 0;
+            opacity: 1;
+        }
+
+        &.show > .details__subitem-item-icon {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__subitem-number {
+        font-weight: 700;
+        color: $accent-text-color;
+        display: block;
+        margin-right: 8px;
+    }
+
+    &__subitem-item-icon {
+        padding: 10px;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+    }
+
+    &__subitem-item-text {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        will-change: max-height;
+        color: $second-text-color;
+        transition: all 0.5s ease-out;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        &__accordion-control {
+            padding: 64px 40px;
+            font-size: 24px;
+            line-height: 30px;
+
+            &.open {
+                padding: 64px 40px 48px;
+            }
+
+            &.open~.details__accordion-content {
+                padding: 0 40px;
+            }
+        }
+
+        &__accordion-title {
+            width: 80%;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &__accordion-content {
+            padding: 0 40px;
+        }
+
+        &__accordion-cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 24px;
+
+            &.help.legalize {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+
+            &.legalize {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {
+        &__accordion-btn-wrap {
+            justify-content: flex-start;
+        }
+
+        &__accordion-cards {
+            &.help.legalize {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+
+        &__subitem-title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__subitem-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__accordion-space {
+
+            &.nothing-impossible {
+                height: 140px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        &__accordion-control {
+            padding: 32px 24px 44px;
+
+            &.open {
+                padding: 32px 24px 24px;
+            }
+        
+            &.open~.details__accordion-content {
+                padding: 0 24px;
+            }
+        }
+
+        &__accordion-title {
+            width: 90%;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__accordion-content {
+            padding: 0 24px;
+        }
+
+        &__accordion-cards {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 16px;
+
+            &.house-hunting,
+            &.legalize,
+            &.help.legalize {
+                margin-bottom: 40px;
+            }
+        
+            &.help,
+            &.support {
+                margin: 24px 0;
+            }
+
+            &.help.legalize {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            &.legalize {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+
+        &__accordion-card {
+            padding: 32px 24px;
+            gap: 16px;
+        }
+
+        &__accordion-btn {
+            width: 312px;
+            height: 64px;
+
+            &.stages {
+                width: 312px;
+            }
+        }
+
+        &__accordion-space {
+            width: 100%;
+            height: 44px;
+        }
+
+        &__accordion-sublist {
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        &__subitem-title {
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &__subitem-control {
+
+            &.show ~ .details__subitem-list-wrap {
+                padding: 0 24px 24px;
+            }
+        }
+
+        &__subitem-list-wrap {
+            padding: 0 24px;
+        }
+
+        &__subitem-item {
+            padding: 28px 16px;
+        }
+    }
+}

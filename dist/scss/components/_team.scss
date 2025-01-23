@@ -1,0 +1,158 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.team {
+    padding: 150px 0;
+
+    &__title {
+        font-family: $accent-font;
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        width: 400px;
+        height: 414px;
+        border-radius: 24px;
+
+        &:hover {
+            .team__card-desc,
+            .team__card-bg {
+                bottom: 0;
+            }
+        }
+    }
+
+    &__card-img {
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__card-desc {
+        color: $light-text-color;
+        position: absolute;
+        bottom: -150px;
+        transition: all 0.8s ease-in-out;
+        z-index: 3;
+        padding: 0 24px 24px;
+        width: 100%;
+    }
+
+    &__card-top,
+    &__card-location {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-top {
+        margin-bottom: 20px;
+    }
+
+    &__card-name {
+        font-family: $accent-font;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__location-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+    }
+
+    &__card-bg {
+        position: absolute;
+        bottom: -150px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.65%, #000000 100%);
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 24px 24px;
+        z-index: 2;
+        transition: all 0.8s ease-in-out;
+    }
+
+    @media screen and (max-width: $breakpoint_laptop) {
+        &__container {
+            justify-items: center;
+            gap: 24px;
+        }
+
+        &__card {
+            width: 298px;
+            height: 414px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_tablet) {
+        padding: 100px 0;
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__container {
+            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        &__card {
+            width: 332px;
+            height: 414px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint_mobile) {
+        padding: 54px 0;
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 24px;
+        }
+
+        &__container {
+            gap: 16px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+
+        &__card {
+            width: 312px;
+            height: 200px;
+        }
+
+        &__card {
+            &:nth-child(4) {
+                & > img {
+                    object-position: top;
+                }
+            }
+        }
+
+        &__card-top {
+            margin-bottom: 16px;
+        }
+
+        &__card-name {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,302 @@
+@import "../common/colors";
+@import "../common/breakpoints";
+@import "../common/fonts";
+
+.swiper-button-lock {
+    display: block;
+}
+
+.swiper-slide.card.swiper-slide-active,
+.swiper-slide.card.swiper-slide-next,
+.swiper-slide.card {
+    width: 296px;
+}
+
+.swiper-button-lock {
+    display: block;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    transition: all 0.8s ease;
+    top: 90%;
+    width: 40px;
+    height: 42px;
+
+    & > svg {
+        color: $main-bgcolor;
+    }
+}
+
+.swiper-button-prev {
+    left: 104px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+}
+
+.swiper-button-next {
+    left: 176px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+}
+
+.card {
+    background-color: $main-bgcolor;
+    border-radius: 24px 24px 0 0;
+    border: none;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 0 20px;
+    transition: all 0.5s ease;
+
+    & > .card-img-wrap {
+        width: 296px;
+        height: 250px;
+        align-self: flex-end;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            width: 40px;
+            height: 40px;
+            background: url("../assets/svg/play-icon.svg") 100% 100%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    }
+
+    & > .card-img-wrap > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px 24px 0 0;
+    }
+
+    &.active {
+        width: 100% !important;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 370px;
+        padding: 0;
+
+        & > .card-img-wrap {
+            width: 296px;
+            height: 370px;
+        }
+
+        & .info {
+            width: 70%;
+            border-radius: 24px 0 0 0;
+            padding: 36px 24px;
+
+            &__icon-left {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            &__card-top-title {
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 48px;
+            }
+
+            &__card-top {
+                min-height: auto;
+            }
+
+            &__card-bottom {
+                opacity: 1;
+                max-height: 142px;
+            }
+
+            &__icon-right {
+                display: none;
+            }
+
+            &__card {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+}
+
+.info {
+    padding: 0 24px;
+
+    &__icon-left {
+        display: none;
+    }
+
+    &__icon-left,
+    &__icon-right {
+        width: 34px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    &__card-top {
+        min-height: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__card-bottom {
+        max-height: 0;
+        opacity: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    &__card-top-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    &__card-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    &__card-text {
+        color: $subtext-color;
+    }
+}
+
+@media screen and (max-width: $breakpoint_laptop) {
+    .swiper-slide.card.swiper-slide-active,
+    .swiper-slide.card.swiper-slide-next,
+    .swiper-slide.card {
+        width: auto;
+    }
+
+    .card {
+        & > .card-img-wrap {
+            width: 100%;
+        }
+
+        &.active {
+            & .info {
+                &__card-top-title {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        left: 40px;
+    }
+
+    .swiper-button-next {
+        left: 112px;
+    }
+}
+
+@media screen and (max-width: $breakpoint_tablet) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 89%;
+    }
+
+    .card {
+
+        &.active {
+            min-height: 510px;
+
+            & > .card-img-wrap {
+                height: 100%;
+            }
+
+            & .info {
+                &__card-bottom {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint_mobile) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 90%;
+    }
+
+    .swiper-button-prev {
+        left: 24px;
+    }
+
+    .swiper-button-next {
+        left: 96px;
+    }
+
+    .card {
+
+        &.active {
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 630px;
+
+            & > .card-img-wrap {
+                width: 100%;
+                height: 110px;
+            }
+
+            & .info {
+                width: 85%;
+                height: 100%;
+                padding: 26px 24px;
+
+                &__card-top-title {
+                    margin-bottom: 32px;
+                }
+
+                &__card-bottom {
+                    gap: 16px;
+                }
+            }
+        }
+    }
+}
+
+.fancybox__container {
+    --fancybox-bg: rgba(24, 24, 27, 0.85);
+}
+
+.video-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+}
