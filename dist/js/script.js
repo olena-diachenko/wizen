@@ -97,7 +97,7 @@ const changeLanguageUrl = (lng) => {
 
 const changeLanguage = () => {
     if (!allowedLanguages.includes(hash)) {
-        location.href = `${location.pathname}#ru`;
+        location.href = `${location.pathname}#ua`;
         location.reload();
     }
     dropdownBtnTop.innerText = hash.charAt(0).toUpperCase() + hash.slice(1).toLowerCase();
